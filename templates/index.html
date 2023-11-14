@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adopción de Mascotas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Adopción de Mascotas</h1>
+    <ul>
+         {% for mascota in mascotas %}
+            <li>  
+                <h3>Nombre de la Mascota: {{ mascota.nombre }} </h3>
+                <p>Tipo: {{ mascota.tipo }}</p>
+                <p>Descripción: {{ mascota.descripcion }}</p>
+                <button class="editar" data-id="{{ mascota._id }}">Editar</button> 
+                <form method="POST" action="/eliminar_mascota/{{ mascota._id }}">
+                    <button type="submit" class="eliminar">Adoptado</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST" action="/agregar_mascota">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+
+        <input type="submit" value="Agregar Mascota">
+    </form>
+    <!-- Aquí está el footer -->
+    <footer>
+        <p>Derechos de autor MORATO© 2023 - Adoptar cambia vidas</p>
+    </footer>
+</body>
+</html>
+<script>
+    document.querySelectorAll(".editar").forEach(button => {
+        button.addEventListener("click", function() {
+            const mascotaId = this.getAttribute("data-id");
+            // Redirecciona a la página de edición con el ID de la mascota
+            window.location.href = `/editar_mascota/${mascotaId}`;
+        });
+    });
+
+    document.querySelectorAll(".eliminar").forEach(button => {
+        button.addEventListener("click", function() {
+            const mascotaId = this.getAttribute("data-id");
+            window.location.href = `/eliminar_mascota/${mascotaId}`;
+        });
+    });
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Mascota</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Editar Mascota</h1>
+
+    <form method="POST" action="/guardar_edicion/{{ mascotaId }}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ mascota.nombre }}" required><br>
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" value="{{ mascota.tipo }}" required><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required>{{ mascota.descripcion }}</textarea><br>
+
+        <input type="submit" value="Guardar Cambios">
+    </form>
+
+    <a href="/">Volver a la lista de mascotas</a>
+
+    <!-- Aquí está el footer -->
+    <footer>
+        <p>Derechos de autor MORATO© 2023 - Adoptar cambia vidas</p>
+    </footer>
+</body>
+</html>
