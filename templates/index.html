@@ -6,32 +6,37 @@
 </head>
 <body>
     <h1>Adopción de Mascotas</h1>
-    <ul>
-         {% for mascota in mascotas %}
-            <li>  
-                <h3>Nombre de la Mascota: {{ mascota.nombre }} </h3>
-                <p>Tipo: {{ mascota.tipo }}</p>
-                <p>Descripción: {{ mascota.descripcion }}</p>
-                <button class="editar" data-id="{{ mascota._id }}">Editar</button> 
-                <form method="POST" action="/eliminar_mascota/{{ mascota._id }}">
-                    <button type="submit" class="eliminar">Adoptado</button>
-                </form>
-            </li>
-        {% endfor %}
-    </ul>
-
-    <form method="POST" action="/agregar_mascota">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
-
-        <label for="tipo">Tipo:</label>
-        <input type="text" id="tipo" name="tipo" required><br>
-
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea><br>
-
-        <input type="submit" value="Agregar Mascota">
-    </form>
+    <div class="lista">
+        <h2>   Mascotas   </h2>        
+        <ul>
+            {% for mascota in mascotas %}
+                <li>  
+                    <h3>Nombre de la Mascota: {{ mascota.nombre }} </h3>
+                    <p>Tipo: {{ mascota.tipo }}</p>
+                    <p>Descripción: {{ mascota.descripcion }}</p>
+                    <button class="editar" data-id="{{ mascota._id }}">Editar</button> 
+                    <form method="POST" action="/eliminar_mascota/{{ mascota._id }}">
+                        <button type="submit" class="eliminar">Adoptado</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="agregar">
+        <h2>Agregar  Mascota</h2>
+        <form method="POST" action="/agregar_mascota">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+    
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" required><br>
+    
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea><br>
+    
+            <input type="submit" value="Agregar Mascota">
+        </form>        
+    </div>    
     <!-- Aquí está el footer -->
     <footer>
         <p>Derechos de autor MORATO© 2023 - Adoptar cambia vidas</p>

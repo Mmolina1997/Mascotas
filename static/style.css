@@ -7,10 +7,16 @@ body {
 }
 
 h1 {
-    background-color: #007bff;
+    background-color: #008080;
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+h2 {
+    color: #008080;
+    text-align: start;
+    padding: 10px 0;
 }
 
 ul {
@@ -29,7 +35,7 @@ li {
 
 /* Estilos de los botones */
 button {
-    background-color: #007bff;
+    background-color: #008080;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -47,13 +53,19 @@ button.eliminar {
 }
 
 /* Formulario de agregar mascota */
-form {
+.agregar form {
     background-color: white;
     margin: 20px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lista form {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
 }
 
 label {
@@ -64,14 +76,14 @@ label {
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #008080;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -81,8 +93,23 @@ input[type="submit"] {
 
 /* Estilos del footer */
 footer {
-    background-color: #007bff;
+    background-color: #008080;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+.lista {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.agregar {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
