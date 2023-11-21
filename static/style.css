@@ -1,20 +1,26 @@
 /* Estilos generales */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    /* Fondo blanco similar a Instagram */
     margin: 0;
     padding: 0;
+    color: #333;
+    /* Color de texto principal */
 }
 
 h1 {
-    background-color: #008080;
+    background-color: #115774;
     color: white;
     text-align: center;
     padding: 20px 0;
+    border-radius: 10px;
 }
 
 h2 {
-    color: #008080;
+    color: #405DE6;
+    /* Color de Instagram */
     text-align: start;
     padding: 10px 0;
 }
@@ -28,31 +34,50 @@ li {
     background-color: white;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    /* Borde más suave */
+    border-radius: 8px;
+    /* Bordes más redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+form.inline {
+    display: inline-block;
+}
+
+
 /* Estilos de los botones */
+
 button {
-    background-color: #008080;
+    background-color: #115774;
+    /* Color de Instagram */
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     margin-right: 10px;
+    width: 100%;
+    max-width: 150px;
+    /* Ancho máximo para evitar que se extiendan demasiado en pantallas grandes */
 }
 
 button.editar {
-    background-color: #28a745; /* Verde */
+    background-color: #56b574;
+    /* Verde similar a Instagram */
 }
 
 button.eliminar {
-    background-color: #dc3545; /* Rojo */
+    background-color: #ed4956;
+    /* Rojo similar a Instagram */
 }
 
+
+/* ... (otros estilos) ... */
+
+
 /* Formulario de agregar mascota */
+
 .agregar form {
     background-color: white;
     margin: 20px;
@@ -91,12 +116,17 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+
 /* Estilos del footer */
+
 footer {
-    background-color: #008080;
+    background-color: #115774;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    /* padding: 10px 0; */
+    position: absolute;
+    width: 100%;
+    height: 50px;
 }
 
 .lista {
@@ -112,4 +142,42 @@ footer {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* welcome page */
+
+.imagen-centro {
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20%;
+    margin-top: 10px;
+}
+
+.boton-continuar {
+    background-color: #509bc2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.bienvenida {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-welcome {
+    background-color: #115774;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
 }

@@ -10,6 +10,10 @@ db = client["mascotas"]
 collection = db["informacion"]
 
 @app.route('/')
+def welcome():
+    return render_template('welcome.html')
+
+@app.route('/pets')
 def index():
     mascotas = collection.find()
     return render_template('index.html', mascotas=mascotas)

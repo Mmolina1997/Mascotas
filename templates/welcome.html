@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bienvenida a la Adopción de Mascotas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="bienvenida">
+        <img src="{{ url_for('static', filename='logo_adopt.png') }}" alt="Logo de tu empresa">
+        <h1>Bienvenido al sitio de Adopción de Mascotas</h1>
+        <p>Texto de bienvenida o información relevante sobre tu aplicación.</p>
+        <a href="{{ url_for('index') }}" class="boton-continuar">Continuar</a>
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bienvenida a la Adopción de Mascotas</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="bienvenida">
+        <img src="{{ url_for('static', filename='logo_adopt.png') }}" alt="Logo de tu empresa" class="imagen-centro">
+        <h1>Bienvenido al sitio de Adopción de Mascotas</h1>
+        <p>Descubre el encanto de la adopción en nuestro refugio virtual. Aquí, cada patita cuenta una historia de amor y espera ansiosamente un hogar donde pueda florecer. Explora nuestras adorables mascotas, encuentra tu compañero perfecto y sé parte de
+            esta hermosa historia de adopción. ¡Gracias por considerar darle a un peludo la oportunidad de ser amado y cuidado! ¡Bienvenido a nuestro refugio de amor! 🐶🏡</p>
+        <a href="{{ url_for('index') }}" class="boton-continuar">Continuar</a>
+    </div>
+    <!-- Aquí está el footer -->
+    <footer class="footer-welcome">
+        <p>Derechos de autor MORATO© 2023 - Adoptar cambia vidas</p>
+    </footer>
+</body>
+
+</html>
