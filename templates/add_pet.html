@@ -1,15 +1,32 @@
-<div class="agregar">
-    <h2>Agregar Mascota</h2>
-    <form method="POST" action="/agregar_mascota">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
+<!DOCTYPE html>
+<html>
 
-        <label for="tipo">Tipo:</label>
-        <input type="text" id="tipo" name="tipo" required><br>
+<head>
+    <title>Agregar Mascota</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required></textarea><br>
+<body>
 
-        <input type="submit" value="Agregar Mascota">
-    </form>
-</div>
+    <div class="agregar">
+        <h2> Agregar mascota </h2>
+        <form method="POST" action="/agregar_mascota">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo" required><br>
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea><br>
+
+            <input type="submit" value="Agregar Mascota">
+        </form>
+    </div>
+    <footer class="footer-welcome">
+        <p>Derechos de autor MORATO© 2023 - Adoptar cambia vidas</p>
+    </footer>
+</body>
+
+
+</html>

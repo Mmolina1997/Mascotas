@@ -13,6 +13,10 @@ collection = db["informacion"]
 def welcome():
     return render_template('welcome.html')
 
+@app.route('/add_pet')
+def addPet():
+    return render_template('add_pet.html')
+
 @app.route('/pets')
 def index():
     mascotas = collection.find()
